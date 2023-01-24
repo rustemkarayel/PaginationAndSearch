@@ -1,0 +1,30 @@
+﻿@using PagedList_SearchBar.PagedList;
+@model Pager;
+@{
+    var action_name = ViewBag.actionName;
+    var contr_name = ViewBag.contrName;
+    var searchText = ViewBag.searchText;
+}
+<nav aria-label="Page navigation">
+    @if (@Model != null && @Model.PageSize > 0)
+    {
+        <ul class="pagination justify-content-end">
+            <li class="page-item @(Model.ActivePage>1?"":"disabled")">
+                <a class="page-link" asp-controller="@contr_name" asp-action="@action_name" asp-route-page="1" asp-route-searchText="@searchText">First Page</a>
+            </li>
+            <li class="page-item @(Model.ActivePage>1?"":"disabled")">
+                <a class="page-link" asp-controller="@contr_name" asp-action="@action_name" asp-route-page="@(Model.ActivePage-1)" asp-route-searchText="@searchText">Previous</a>
+            </li>
+            @for (var i = Model.BeginPage; i <= Model.EndPage; i++)
+            {
+                <li class="page-item @(Model.ActivePage==@i?"active":"")"><a class="page-link" asp-controller="@contr_name" asp-action="@action_name" asp-route-page="@i" asp-route-searchText="@searchText">@i</a></li>
+            }
+            <li class="page-item @(Model.ActivePage<Model.PageSize?"":"disabled")">
+                <a class="page-link" asp-controller="@contr_name" asp-action="@action_name" asp-route-page="@(Model.ActivePage+1)" asp-route-searchText="@searchText">Next</a>
+            </li>
+            <li class="page-item @(Model.ActivePage<Model.PageSize?"":"disabled")">
+                <a class="page-link" asp-controller="@contr_name" asp-action="@action_name" asp-route-page="@(Model.PageSize)" asp-route-searchText="@searchText">Last Page</a>
+            </li>
+        </ul>
+    }
+</nav>
