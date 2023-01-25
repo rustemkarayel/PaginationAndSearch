@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Employees</title>
+    <title>Employee Add</title>
     <!-- Table and Search Bar Css Import-->
     <link href="~/css/Table-SearchBar.css" rel="stylesheet" />
     <!-- Bootstrap Css Import-->
@@ -20,7 +20,7 @@
     <div class="card-header">
         <h2>Employee Insert</h2>
     </div>
-    <div class="card-body" style="background-color:lightgrey;">
+    <div class="card-body">
         @using (Html.BeginForm("Add", "Employee", FormMethod.Post, new { @class = "form-group" }))
         {
             @Html.Label("First Name")
@@ -47,6 +47,12 @@
             <select class="form-control" name="Gender">
                 <option value="True">Erkek</option>
                 <option value="False">Kadın</option>
+            </select>
+            <br />
+            @Html.Label("IsActive")
+            <select class="form-control" name="IsActive">
+                <option value="True">Aktif</option>
+                <option value="False">Pasif</option>
             </select>
             <br />
             <input class="form-control btn btn-primary" type="submit" value="Employee Add" />

@@ -28,10 +28,7 @@ namespace PagedList_SearchBar
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapControllerRoute(
-    name: "Employee", pattern: "Employee/EmployeeList", defaults: new { controller = "Employee", action = "Index" }
-    );
+                pattern: "{controller=Employee}/{action=Index}/{id?}");
 
             app.Run();
         }

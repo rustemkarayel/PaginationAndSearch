@@ -12,10 +12,6 @@
         //Bir sayfada görüntülenecek sayfa sayısı
         public int CurrentData { get; set; }
 
-        public Pager()
-        {
-        }
-
         public Pager(int itemCounts, int pageSize, int page)
         {
             this.TotalData = itemCounts;

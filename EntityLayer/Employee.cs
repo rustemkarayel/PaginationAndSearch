@@ -19,7 +19,8 @@ namespace EntityLayer
         public string City { get; set; }
         public int Age { get; set; }
         public int Wage { get; set; }
-        public bool Gender { get; set; }      
+        public bool Gender { get; set; }
+        public bool IsActive { get; set; }
 
     }
 }

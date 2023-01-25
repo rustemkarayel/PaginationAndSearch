@@ -7,23 +7,51 @@ i {
 }
 
 body {
-    background-color: #EEEEEE;
+    background-color: #c7c3c3 !important;
 }
 
-
-    .search input[type=text] {
-        float: right;
-        padding: 6px;
-        background: #251749;
-        color: white;
-        margin-top: -10px;
-        margin-right: 75px;
-        margin-bottom:15px;
-        font-size: 17px;
+.search-field {
+    float:right;
+    margin-bottom:20px;
+    margin-right:20px;
+}
+    .search-field input{
+        font-size:17px;
+        border:none;
+        padding:4px;
     }
-
+    .search-field button {
+        margin-left: -4px;
+        font-size: 17px;
+        border:none;
+        padding:4px;
+    }
+/*.search-field input[type=text] {
+    float: right;
+    padding: 6px;
+    background: white;
+    color: black;
+    margin-top: 0px;
+    margin-right: 90px !important;
+    margin-bottom: 15px;
+    font-size: 17px;
+    border: none;
+    border-radius: 7px 0px 0px 7px;
+    border: 1px solid red;
+}
+.buttonSearch {
+    float: right;
+    padding: 6px 10px;
+    margin-top: -10px;
+    margin-right: -245px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 7px 7px 0px;
+}*/
 @media screen and (max-width: 600px) {
-    .search input[type=text] {
+    .search-field input[type=text] {
         float: none;
         display: block;
         text-align: left;
@@ -32,26 +60,16 @@ body {
         padding: 14px;
     }
 
-    .search input[type=text] {
+    .search-field input[type=text] {
         border: 1px solid #ccc;
     }
 }
 
-.buttonSearch {
-    float: right;
-    padding: 6px 10px;
-    margin-top: -10px;
-    margin-right: -250px;
-    background: #ddd;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-}
+
 
 .content-wrapper {
     border-radius: 10px;
-    margin: 50px 25px 10px 25px;
-    background-color: #FEFCF3 !important;
+    margin: 50px 25px 10px 25px; 
 }
 
 .card {
@@ -109,6 +127,5 @@ body {
 
 .btn-primary {
     width: 20% !important;
-    position: absolute;
-    left: 40%;
+    margin-left:40%;
 }
